@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #F2F2F2;" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.players.ConsultPlayersController">
+	<children>
+		<Label layoutX="59.0" layoutY="46.0" text="Manage Players" textFill="#71afe9">
+			<font>
+				<Font name="Arial Bold Italic" size="24.0" />
+			</font>
+		</Label>
+		<Separator layoutX="38.0" layoutY="80.0" prefHeight="1.0" prefWidth="869.0" style="-fx-background-color: #71AFE9;" />
+		<Label layoutX="38.0" layoutY="90.0" text="Players" textFill="#71afe9" underline="true">
+			<font>
+				<Font name="Arial Italic" size="14.0" />
+			</font>
+		</Label>
+		<JFXListView fx:id="playersListView" layoutX="38.0" layoutY="115.0" prefHeight="395.0" prefWidth="248.0" />
+		<Button layoutX="38.0" layoutY="517.0" mnemonicParsing="false" onAction="#addEditPlayer" prefHeight="27.0" prefWidth="99.0" text="Add Player" />
+		<Button layoutX="144.0" layoutY="517.0" mnemonicParsing="false" onAction="#removePlayer" prefHeight="27.0" prefWidth="125.0" text="Remove Player" />
+		<ImageView fx:id="profilePictureIV" fitHeight="125.0" fitWidth="125.0" layoutX="318.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../default.png" />
+			</image>
+		</ImageView>
+		<Label fx:id="lastnameLabel" layoutX="475.0" layoutY="119.0" prefHeight="37.0" prefWidth="325.0">
+			<font>
+				<Font name="Arial Bold Italic" size="32.0" />
+			</font>
+		</Label>
+		<Label fx:id="firstnameLabel" layoutX="475.0" layoutY="163.0" prefHeight="25.0" prefWidth="174.0">
+			<font>
+				<Font name="Arial" size="21.0" />
+			</font>
+		</Label>
+		<ImageView fx:id="flagIV" fitHeight="37.0" fitWidth="54.0" layoutX="475.0" layoutY="199.0" pickOnBounds="true" />
+		<Label fx:id="countryLabel" layoutX="540.0" layoutY="203.0" prefHeight="25.0" prefWidth="191.0">
+			<font>
+				<Font name="Arial" size="21.0" />
+			</font>
+		</Label>
+		<ImageView fitHeight="25.0" fitWidth="27.0" layoutX="828.0" layoutY="125.0" pickOnBounds="true">
+			<image>
+				<Image url="@../edit.png" />
+			</image>
+		</ImageView>
+		<Button layoutX="827.0" layoutY="124.0" mnemonicParsing="false" onAction="#editPlayer" prefHeight="20.0" prefWidth="27.0" styleClass="menu_button" />
+		<Label fx:id="confederationLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="800.0" layoutY="163.0" prefWidth="80.0">
+			<font>
+				<Font name="Arial" size="21.0" />
+			</font>
+		</Label>
+		<Label fx:id="ageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="800.0" layoutY="203.0" prefWidth="80.0">
+			<font>
+				<Font name="Arial" size="21.0" />
+			</font>
+		</Label>
+		<Separator layoutX="318.0" layoutY="263.0" prefHeight="3.0" prefWidth="594.0" style="-fx-background-color: #71AFE9;" />
+		<Label layoutX="318.0" layoutY="280.0" prefHeight="20.0" prefWidth="202.0" text="World Cups Participations" textFill="#71afe9" underline="true">
+			<font>
+				<Font name="Arial Italic" size="16.0" />
+			</font>
+		</Label>
+		<ListView fx:id="playersWorldCupsListView" layoutX="318.0" layoutY="307.0" prefHeight="202.0" prefWidth="290.0" />
+		<Label layoutX="638.0" layoutY="307.0" prefHeight="25.0" prefWidth="191.0" text="World Cup Wins:" textFill="#71afe9">
+			<font>
+				<Font name="Arial" size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="638.0" layoutY="338.0" prefHeight="25.0" prefWidth="191.0" text="World Cup Finals:" textFill="#71afe9">
+			<font>
+				<Font name="Arial" size="15.0" />
+			</font>
+		</Label>
+		<Label layoutX="638.0" layoutY="373.0" prefHeight="25.0" prefWidth="191.0" text="World Cup Career Average:" textFill="#71afe9">
+			<font>
+				<Font name="Arial" size="15.0" />
+			</font>
+		</Label>
+		<ImageView fitHeight="36.0" fitWidth="35.0" layoutX="872.0" layoutY="28.0" pickOnBounds="true">
+			<image>
+				<Image url="@../Home.png" />
+			</image>
+		</ImageView>
+		<Button defaultButton="true" layoutX="865.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToHomeScreen" prefHeight="36.0" prefWidth="42.0" styleClass="menu_button" underline="true">
+			<effect>
+				<Blend />
+			</effect>
+		</Button>
+      <Label fx:id="worldCupWinsLbl" layoutX="850.0" layoutY="311.0" prefHeight="17.0" prefWidth="42.0" text="-" textAlignment="CENTER" />
+      <Label fx:id="worldCupFinalsLbl" layoutX="850.0" layoutY="342.0" prefHeight="17.0" prefWidth="42.0" text="-" textAlignment="CENTER" />
+      <Label fx:id="worldCupAvgLbl" layoutX="850.0" layoutY="377.0" prefHeight="17.0" prefWidth="42.0" text="0.0" />
+	</children>
+</AnchorPane>

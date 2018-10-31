@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.worldCup.AddWorldCupGamesController">
+	<children>
+		<Label layoutX="51.0" layoutY="43.0" text="World Cup Games" textFill="#71afe9">
+			<font>
+				<Font name="Arial Bold Italic" size="24.0" />
+			</font>
+		</Label>
+		<Separator layoutX="25.0" layoutY="81.0" prefHeight="3.0" prefWidth="892.0" style="-fx-background-color: #71AFE9;" />
+		<Label layoutX="787.0" layoutY="142.0" text="Phase control:" textFill="#71afe9" underline="true">
+			<font>
+				<Font name="Arial Italic" size="16.0" />
+			</font>
+		</Label>
+		<TableView fx:id="gamesTV" layoutX="29.0" layoutY="106.0" prefHeight="312.0" prefWidth="728.0">
+			<columns>
+				<TableColumn fx:id="phaseColumn" prefWidth="129.0" text="Phase" />
+				<TableColumn fx:id="gameDescriptionColumn" prefWidth="367.0" text="Match" />
+				<TableColumn fx:id="gameWinnerColumn" prefWidth="231.0" text="Winner" />
+			</columns>
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+		<Label layoutX="788.0" layoutY="178.0" text="Last 32:">
+			<font>
+				<Font name="Arial Bold" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="788.0" layoutY="202.0" text="Last 16:">
+			<font>
+				<Font name="Arial Bold" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="788.0" layoutY="251.0" text="SF:">
+			<font>
+				<Font name="Arial Bold" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="788.0" layoutY="227.0" text="QF:">
+			<font>
+				<Font name="Arial Bold" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="789.0" layoutY="275.0" text="Final:">
+			<font>
+				<Font name="Arial Bold" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="789.0" layoutY="299.0" text="3rd &amp; 4th:">
+			<font>
+				<Font name="Arial Bold" size="13.0" />
+			</font>
+		</Label>
+		<Button layoutX="29.0" layoutY="429.0" mnemonicParsing="false" onAction="#addGameScreen" text="Add" />
+		<Button layoutX="80.0" layoutY="429.0" mnemonicParsing="false" onAction="#removeGame" text="Remove" />
+		<Button layoutX="863.0" layoutY="529.0" mnemonicParsing="false" onAction="#saveWCtoDB" text="Finish" />
+		<Separator layoutX="25.0" layoutY="489.0" prefHeight="3.0" prefWidth="892.0" style="-fx-background-color: #71AFE9;" />
+		<Button layoutX="804.0" layoutY="529.0" mnemonicParsing="false" onAction="#goToPreviousScreen" text="Back" />
+		<Label fx:id="last32Label" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="178.0" prefWidth="15.0" text="0">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label fx:id="last16Label" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="202.0" prefWidth="15.0" text="0">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label fx:id="quarterFinalsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="227.0" prefWidth="15.0" text="0">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label fx:id="thirdForthLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="299.0" prefWidth="15.0" text="0">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label fx:id="semiFinalsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="251.0" prefWidth="15.0" text="0">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label fx:id="finalLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="275.0" prefWidth="15.0" text="0">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="887.0" layoutY="178.0" prefWidth="29.0" text="of 16">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="887.0" layoutY="202.0" prefWidth="29.0" text="of 8">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="887.0" layoutY="227.0" prefWidth="29.0" text="of 4">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="887.0" layoutY="251.0" prefWidth="29.0" text="of 2">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="887.0" layoutY="275.0" prefWidth="29.0" text="of 1">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+		<Label layoutX="887.0" layoutY="299.0" prefWidth="29.0" text="of 1">
+			<font>
+				<Font name="Arial" size="13.0" />
+			</font>
+		</Label>
+      <ProgressBar fx:id="progressBar" layoutX="297.0" layoutY="265.0" prefHeight="27.0" prefWidth="304.0" progress="0.0" />
+	</children>
+</AnchorPane>

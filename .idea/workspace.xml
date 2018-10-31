@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63d39b2f-ad7b-48d0-a548-623251f40cf4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/https:/github.com/ruitex23/WorldCupLogApp.git" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/players/AddEditPlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/players/AddEditPlayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/players/ConsultPlayersController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/players/ConsultPlayersController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/players/ConsultPlayersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/players/ConsultPlayersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddGameSetsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddWorldCupGamesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/AddWorldCupGamesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/CreateWorldCupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/controllers/worldCup/CreateWorldCupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/domains/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/domains/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/domains/Phase.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/domains/Phase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/domains/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/domains/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/java/domains/WorldCup.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/java/domains/WorldCup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/resources/views/AddEditPlayerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/resources/views/AddEditPlayerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/resources/views/AddWorldCupGamesScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/resources/views/AddWorldCupGamesScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/resources/views/ConsultPlayersScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/resources/views/ConsultPlayersScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/classes/main/resources/views/CreateWorldCupScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/classes/main/resources/views/CreateWorldCupScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/controllers/players/AddEditPlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/controllers/players/AddEditPlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/controllers/players/ConsultPlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/controllers/players/ConsultPlayersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/controllers/worldCup/AddGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/controllers/worldCup/AddGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/controllers/worldCup/AddGameSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/controllers/worldCup/AddGameSetsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/controllers/worldCup/AddWorldCupGamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/controllers/worldCup/AddWorldCupGamesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/controllers/worldCup/CreateWorldCupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/controllers/worldCup/CreateWorldCupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/domains/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/domains/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/domains/Phase.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/domains/Phase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/domains/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/domains/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/java/domains/WorldCup.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/java/domains/WorldCup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/resources/views/AddEditPlayerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/resources/views/AddEditPlayerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/resources/views/AddWorldCupGamesScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/resources/views/AddWorldCupGamesScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/resources/views/ConsultPlayersScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/resources/views/ConsultPlayersScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/main/resources/views/CreateWorldCupScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/main/resources/views/CreateWorldCupScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/views/AddEditPlayerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/views/AddEditPlayerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/views/AddWorldCupGamesScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/views/AddWorldCupGamesScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/views/ConsultPlayersScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/views/ConsultPlayersScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/build/src/views/CreateWorldCupScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/src/views/CreateWorldCupScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/deploy/WorldCupLogApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/deploy/WorldCupLogApp.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/deploy/WorldCupLogApp.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/build/deploy/WorldCupLogApp.jnlp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/dist/WorldCupLogApp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/dist/WorldCupLogApp.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/controllers/players/AddEditPlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/controllers/players/AddEditPlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/controllers/players/ConsultPlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/controllers/players/ConsultPlayersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/controllers/worldCup/AddGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/controllers/worldCup/AddGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/controllers/worldCup/AddGameSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/controllers/worldCup/AddGameSetsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/controllers/worldCup/AddWorldCupGamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/controllers/worldCup/AddWorldCupGamesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/controllers/worldCup/CreateWorldCupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/controllers/worldCup/CreateWorldCupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/domains/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/domains/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/domains/Phase.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/domains/Phase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/domains/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/domains/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/java/domains/WorldCup.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/java/domains/WorldCup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/resources/views/AddEditPlayerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/resources/views/AddEditPlayerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/resources/views/AddWorldCupGamesScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/resources/views/AddWorldCupGamesScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/resources/views/ConsultPlayersScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/resources/views/ConsultPlayersScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/project/src/main/resources/views/CreateWorldCupScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/project/src/main/resources/views/CreateWorldCupScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/WorldCupLogDatabaseTestConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/WorldCupLogDatabaseTestConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/players/ConsultPlayersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/players/ConsultPlayersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/worldCup/AddGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/worldCup/AddGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/worldCup/AddGameSetsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/worldCup/AddGameSetsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/worldCup/AddWorldCupGamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/worldCup/AddWorldCupGamesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domains/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domains/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domains/WorldCup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domains/WorldCup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/AddEditPlayerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/AddEditPlayerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/ConsultPlayersScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/ConsultPlayersScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/HomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/HomeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blomdahl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bury.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Caudron.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Ceulemans.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Jaspers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/WorldCupLogApp/WorldCupLogApp/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/WorldCupLogApp/WorldCupLogApp/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bola amarela top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bola amarela.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bola branca top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bola branca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/carom-billiard-balls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cupsPoss0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ae.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/af.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/al.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/am.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/at.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/au.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/az.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/be.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/br.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/by.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/bz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ci.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/co.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/cz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/dj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/dk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/dm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/do.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/dz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/eg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/eh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/er.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/es.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/et.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/fi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/fj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/fm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/fr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ga.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/gy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/hn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/hr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ht.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/hu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/id.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/il.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/iq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/is.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/it.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/jm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/jo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/jp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ke.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/kg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/kh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ki.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/km.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/kn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/kp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/kr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/kw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/kz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/la.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/lb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/lc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/li.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/lk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/lr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/lt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/lu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/lv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/md.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/me.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ml.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/my.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/mz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/na.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/nl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/np.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/nr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/nz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/om.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/pa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/pe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/pg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/pk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/pl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/pt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/pw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/py.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/qa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/rs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/rw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/se.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/si.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/so.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/st.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/sz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/td.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/th.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/to.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/tz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ua.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/us.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/uy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/uz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/va.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/vc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/vn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/vu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ws.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/ye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/za.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/zm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-mini/zw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ae.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/af.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/al.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/am.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/at.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/au.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/az.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/be.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/br.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/by.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/bz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ci.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/co.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/cz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/dj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/dk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/dm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/do.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/dz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/eg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/eh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/er.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/es.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/et.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/fi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/fj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/fm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/fr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ga.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/gy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/hn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/hr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ht.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/hu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/id.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/il.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/iq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/is.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/it.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/jm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/jo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/jp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ke.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/kg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/kh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ki.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/km.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/kn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/kp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/kr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/kw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/kz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/la.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/lb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/lc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/li.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/lk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/lr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/lt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/lu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/lv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/md.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/me.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ml.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/my.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/mz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/na.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/nl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/np.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/nr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/nz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/om.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/pa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/pe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/pg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/pk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/pl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/pt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/pw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/py.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/qa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/rs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/rw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/se.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/si.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/so.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/st.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/sz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/td.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/th.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/to.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/tz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ua.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/us.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/uy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/uz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/va.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/vc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/vn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/vu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ws.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/ye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/za.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/zm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flags-normal/zw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/config/WorldCupLogDatabaseTestConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/config/WorldCupLogDatabaseTestConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/ControllersInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/ControllersInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/HomeScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/HomeScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/players/AddEditPlayerController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/players/AddEditPlayerController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/players/AddEditPlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/players/AddEditPlayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/players/ConsultPlayersController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/players/ConsultPlayersController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/players/ConsultPlayersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/players/ConsultPlayersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddGameSetsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddWorldCupGamesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/AddWorldCupGamesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/CreateWorldCupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/controllers/worldCup/CreateWorldCupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/domains/Composed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/domains/Composed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/domains/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/domains/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/domains/GameExt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/domains/GameExt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/domains/IsPartOf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/domains/IsPartOf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/domains/Participated.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/domains/Participated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/domains/Phase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/domains/Phase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/domains/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/domains/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/domains/WorldCup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/domains/WorldCup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/model/CreateWorldCupModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/model/CreateWorldCupModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/repositories/GameRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/repositories/GameRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/repositories/PlayerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/repositories/PlayerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/repositories/WorldCupRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/repositories/WorldCupRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/services/GameService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/services/GameService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/services/PlayerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/services/PlayerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/services/WorldCupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/services/WorldCupService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/utils/WorldCupUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/utils/WorldCupUtils$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/utils/WorldCupUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/utils/WorldCupUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/views/AddEditPlayerScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/resources/views/AddEditPlayerScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/views/ConsultPlayersScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/resources/views/ConsultPlayersScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/views/HomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/resources/views/HomeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/merckx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/playerDefault.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/semih.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sweden.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/teste.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/teste_clicked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/AddEditPlayerScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/AddGameScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/AddGameScreenSets.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/AddWorldCupGamesScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/ConsultPlayersScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/CreateWorldCupScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/views/HomeScreen.fxml" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1694450899">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.80" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/players/ConsultPlayersController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="723" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WorldCupLogApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WorldCupLogApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WorldCupLogApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WorldCupLogApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WorldCupLogApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WorldCupLogApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WorldCupLogApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WorldCupLogApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WorldCupLogApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WorldCupLogApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WorldCupLogApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WorldCupLogApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WorldCupLogApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WorldCupLogApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541010869300" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63d39b2f-ad7b-48d0-a548-623251f40cf4" name="Default Changelist" comment="" />
+      <created>1541010249891</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541010249891</updated>
+      <workItem from="1541010251868" duration="130000" />
+      <workItem from="1541010413223" duration="542000" />
+      <workItem from="1541021078043" duration="483000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1155000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="723" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2584814" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.3296355" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3296355" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/players/ConsultPlayersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
