@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package main.java.controllers.worldCup;
 
@@ -107,9 +107,10 @@ public class AddGameSetsController {
 	private Boolean confirmedP1;
 	private Boolean confirmedP2;
 	private AddWorldCupGamesController previousController;
-	
+	private int auxPointsP1S1 = 0;
+
 	private Integer totalSetsPlayed = 0;
-	
+
 	public void setAvailablePlayers(List<Player> list) {
 		this.availablePlayers = list;
 	}
@@ -190,7 +191,7 @@ public class AddGameSetsController {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private void setupToggle() {
 		automaticToggle.setSelected(true);
@@ -267,8 +268,8 @@ public class AddGameSetsController {
 			addGameBtn.setDisable(false);
 		}
 	}
-	
-	@FXML 
+
+	@FXML
 	private void clearPlayerOne(ActionEvent event) {
 		this.player1ChoiceBox.setItems(FXCollections.observableArrayList(availablePlayers));
 		this.player1ChoiceBox.getSelectionModel().selectFirst();
@@ -301,8 +302,8 @@ public class AddGameSetsController {
 		enablePlayer2();
 		addGameBtn.setDisable(true);
 	}
-	
-	
+
+
 	private void enablePlayer1() {
 		player1ChoiceBox.setDisable(false);
 		player1Set1ChoiceBox.setDisable(false);
@@ -316,7 +317,7 @@ public class AddGameSetsController {
 		player1TotalInningsTextField.setDisable(false);
 		player1TotalPointsTextField.setDisable(false);
 	}
-	
+
 	private void disablePlayer1() {
 		player1ChoiceBox.setDisable(true);
 		player1Set1ChoiceBox.setDisable(true);
@@ -330,8 +331,8 @@ public class AddGameSetsController {
 		player1TotalInningsTextField.setDisable(true);
 		player1TotalPointsTextField.setDisable(true);
 	}
-	
-	
+
+
 	private void enablePlayer2() {
 		player2ChoiceBox.setDisable(false);
 		player2Set1ChoiceBox.setDisable(false);
@@ -345,7 +346,7 @@ public class AddGameSetsController {
 		player2TotalInningsTextField.setDisable(false);
 		player2TotalPointsTextField.setDisable(false);
 	}
-	
+
 	private void disablePlayer2() {
 		player2ChoiceBox.setDisable(true);
 		player2Set1ChoiceBox.setDisable(true);
@@ -359,12 +360,12 @@ public class AddGameSetsController {
 		player2TotalInningsTextField.setDisable(true);
 		player2TotalPointsTextField.setDisable(true);
 	}
-	
+
 	private void updateGameStats() {
 		gameAverage = (averageP1 + averageP2) / 2;
 		gameAverageLabel.setText(String.format("%.3f", gameAverage));
 	}
-	
+
 	private void updateGameWinner() {
 		Integer p1Pts = Integer.valueOf(player1SetsWon.getText());
 		Integer p2Pts = Integer.valueOf(player2SetsWon.getText());
@@ -379,10 +380,10 @@ public class AddGameSetsController {
 				p1Pts.compareTo(1) == 0 && p2Pts.compareTo(4) == 0 || p1Pts.compareTo(2) == 0 && p2Pts.compareTo(4) == 0 ||
 				p1Pts.compareTo(3) == 0 && p2Pts.compareTo(4) == 0) {
 			winnerLabel.setText(player2ChoiceBox.getSelectionModel().getSelectedItem().toString());
-		} 
+		}
 		game.setWinner(winnerLabel.getText());
 	}
-	
+
 	@FXML
 	public void addGame() {
 		GameExt gameExt = toGameExt();
@@ -400,30 +401,30 @@ public class AddGameSetsController {
 		gameExt.setIsSet(game.getIsSet());
 		gameExt.setLocation(game.getLocation());
 		gameExt.setWinner(game.getWinner());
-		
+
 		switch (totalSetsPlayed) {
-			
+
 		case 3: //case 3-0
 			gameExt.setPlayerOneSetOne(Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetTwo(Integer.valueOf(player1Set2ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetThree(Integer.valueOf(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()));
-			
+
 			gameExt.setPlayerTwoSetOne(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetTwo(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetThree(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			break;
-			
+
 		case 4: 	//case 3-1
 			gameExt.setPlayerOneSetOne(Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetTwo(Integer.valueOf(player1Set2ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetThree(Integer.valueOf(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetFour(Integer.valueOf(player1Set4ChoiceBox.getSelectionModel().getSelectedItem()));
-			
+
 			gameExt.setPlayerTwoSetOne(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetTwo(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetThree(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetFour(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
-			
+
 			break;
 		case 5: 	//case 3-2
 			gameExt.setPlayerOneSetOne(Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()));
@@ -431,14 +432,14 @@ public class AddGameSetsController {
 			gameExt.setPlayerOneSetThree(Integer.valueOf(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetFour(Integer.valueOf(player1Set4ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetFive(Integer.valueOf(player1Set5ChoiceBox.getSelectionModel().getSelectedItem()));
-	
-			
+
+
 			gameExt.setPlayerTwoSetOne(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetTwo(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetThree(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetFour(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetFive(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
-			
+
 			break;
 		case 6: 	//case 4-2
 			gameExt.setPlayerOneSetOne(Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()));
@@ -447,7 +448,7 @@ public class AddGameSetsController {
 			gameExt.setPlayerOneSetFour(Integer.valueOf(player1Set4ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetFive(Integer.valueOf(player1Set5ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetSix(Integer.valueOf(player1Set6ChoiceBox.getSelectionModel().getSelectedItem()));
-			
+
 			gameExt.setPlayerTwoSetOne(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetTwo(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetThree(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
@@ -463,7 +464,7 @@ public class AddGameSetsController {
 			gameExt.setPlayerOneSetFive(Integer.valueOf(player1Set5ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetSix(Integer.valueOf(player1Set6ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerOneSetSeven(Integer.valueOf(player1Set7ChoiceBox.getSelectionModel().getSelectedItem()));
-			
+
 			gameExt.setPlayerTwoSetOne(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetTwo(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetThree(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
@@ -471,7 +472,7 @@ public class AddGameSetsController {
 			gameExt.setPlayerTwoSetFive(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetSix(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 			gameExt.setPlayerTwoSetSeven(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
-			
+
 			break;
 		}
 		//player 1
@@ -488,13 +489,13 @@ public class AddGameSetsController {
 		gameExt.setPlayerTwoName(this.player2ChoiceBox.getValue().toString());
 		gameExt.setPlayerTwoPoints(Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()));
 		gameExt.setPlayerTwoSetsWon(Integer.valueOf(player2SetsWon.getText()));
-		
+
 		gameExt.setPhaseDescription(phaseDescription);
 		return gameExt;
 	}
-	
+
 	/**
-	 * 
+	 *
 	 */
 	private void setTextFieldsOnlyNumeric() {
 		player1SetsWon.textProperty().addListener(new ChangeListener<String>() {
@@ -570,13 +571,13 @@ public class AddGameSetsController {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private void addRadioButtonListeners() {
 		last32RadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
 			@Override
 			public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-				if (isNowSelected) { 
+				if (isNowSelected) {
 					phaseDescription = WorldCupUtils.LAST_32_PHASE;
 					System.out.println("Entrei!!");
 				} else {
@@ -587,7 +588,7 @@ public class AddGameSetsController {
 		last16RadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
 			@Override
 			public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-				if (isNowSelected) { 
+				if (isNowSelected) {
 					phaseDescription = WorldCupUtils.LAST_16_PHASE;
 					System.out.println("Entrei!!");
 				} else {
@@ -598,7 +599,7 @@ public class AddGameSetsController {
 		quarterFinalsRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
 			@Override
 			public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-				if (isNowSelected) { 
+				if (isNowSelected) {
 					phaseDescription = WorldCupUtils.QUARTER_FINALS_PHASE;
 					System.out.println("Entrei!!");
 				} else {
@@ -609,7 +610,7 @@ public class AddGameSetsController {
 		semiFinalsRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
 			@Override
 			public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-				if (isNowSelected) { 
+				if (isNowSelected) {
 					phaseDescription = WorldCupUtils.SEMI_FINALS_PHASE;
 					System.out.println("Entrei!!");
 				} else {
@@ -620,7 +621,7 @@ public class AddGameSetsController {
 		thirdForthRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
 			@Override
 			public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-				if (isNowSelected) { 
+				if (isNowSelected) {
 					phaseDescription = WorldCupUtils.THIRD_FORTH_PHASE;
 					System.out.println("Entrei!!");
 				} else {
@@ -631,7 +632,7 @@ public class AddGameSetsController {
 		theFinalRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
 			@Override
 			public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-				if (isNowSelected) { 
+				if (isNowSelected) {
 					phaseDescription = WorldCupUtils.FINAL_PHASE;
 					System.out.println("Entrei!!");
 				} else {
@@ -642,10 +643,10 @@ public class AddGameSetsController {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private void setupAutomaticFeatureListeners() {
-		//depois de inserir o numero de sets ganhos pelo jogador 2, 
+		//depois de inserir o numero de sets ganhos pelo jogador 2,
 		//o automatismo atribui os pontos e "desbloqueia" o número correcto de sets que foram disputados
 		player2SetsWon.textProperty().addListener((observable, oldValue, newValue) -> {
 			if(automaticToggle.isSelected()) {
@@ -700,10 +701,10 @@ public class AddGameSetsController {
 						player2TotalPointsTextField.setText("45");
 						player1TotalPointsTextField.setDisable(false);
 						totalSetsPlayed = 3;
-					} 
-					
+					}
+
 					//P1 vence 3-1 ou P2 vence 3-1
-					else if((p1Pts.compareTo(3) == 0 && p2Pts.compareTo(1) == 0) || 
+					else if((p1Pts.compareTo(3) == 0 && p2Pts.compareTo(1) == 0) ||
 							(p1Pts.compareTo(1) == 0 && p2Pts.compareTo(3) == 0)) {
 						player1Set1ChoiceBox.setDisable(false);
 						player1Set2ChoiceBox.setDisable(false);
@@ -726,10 +727,10 @@ public class AddGameSetsController {
 						player2TotalInningsTextField.setDisable(false);
 						player2TotalPointsTextField.setDisable(false);
 						totalSetsPlayed = 4;
-					} 
-					
+					}
+
 					//P1 vence 3-2 ou P2 vence 3-2
-					else if((p1Pts.compareTo(3) == 0 && p2Pts.compareTo(2) == 0) || 
+					else if((p1Pts.compareTo(3) == 0 && p2Pts.compareTo(2) == 0) ||
 							(p1Pts.compareTo(2) == 0 && p2Pts.compareTo(3) == 0)) {
 						player1Set1ChoiceBox.setDisable(false);
 						player1Set2ChoiceBox.setDisable(false);
@@ -756,14 +757,14 @@ public class AddGameSetsController {
 						player2TotalInningsTextField.setDisable(false);
 						player2TotalPointsTextField.setDisable(false);
 						totalSetsPlayed = 5;
-					} 
+					}
 				} else {
 					setAutomaticMode();
 					setPointsChoiceBoxes();
 					player1TotalPointsTextField.setText("");
 					player2TotalPointsTextField.setText("");
 				}
-			} 
+			}
 		});
 
 		//para o caso em que o jogador 1 vence 3-1 e o jogador 2 vence o primeiro set
@@ -771,7 +772,7 @@ public class AddGameSetsController {
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0
 							&& StringUtils.isNumeric(player1Set1ChoiceBox.getItems().get(new_value.intValue()))) {
 						Integer p1Pts = Integer.valueOf(player1Set1ChoiceBox.getItems().get(new_value.intValue()));
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
@@ -781,6 +782,7 @@ public class AddGameSetsController {
 							//e P2 vence Set1
 							System.out.println(p1Pts.compareTo(15));
 							System.out.println(p1Pts);
+							auxPointsP1S1 = p1Pts.intValue();
 							if(p1Pts.compareTo(15) < 0 && p1Pts.compareTo(0) != 0) {
 //								player1Set1ChoiceBox.setDisable(true);
 								player2Set1ChoiceBox.getSelectionModel().select(16);
@@ -793,20 +795,20 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
-		//P2 vence 3-0, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1, 
+
+		//P2 vence 3-0, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1,
 		//logo depois deste pode acertar as contas dos pontos do jogador 1
 		player1Set3ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0
 							&& StringUtils.isNumeric(player1Set3ChoiceBox.getItems().get(new_value.intValue()))) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
 						if(p1SetsResult.compareTo(0) == 0 && p2SetsResult.compareTo(3) == 0) {
 							//verifica se os 3 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player1Set2ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
 								int totalPointsSet1 = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -814,7 +816,7 @@ public class AddGameSetsController {
 								int totalPoints = totalPointsSet1 + totalPointsSet2 + Integer.valueOf(player1Set3ChoiceBox.getItems().get(new_value.intValue()));
 								player1TotalPointsTextField.setText(String.valueOf(totalPoints));
 							}
-							
+
 						}
 					} else {
 						player1TotalPointsTextField.setText("");
@@ -822,52 +824,56 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player1Set4ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
-				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0 
-							&& StringUtils.isNumeric(player1Set4ChoiceBox.getItems().get(new_value.intValue()))) {
-						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
-						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P2 vence 3-1 ou 4-0, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1, 
-						//logo depois deste pode acertar as contas dos pontos do jogador 1
-						if(p1SetsResult.compareTo(1) == 0 && p2SetsResult.compareTo(3) == 0 || p1SetsResult.compareTo(0) == 0 && p2SetsResult.compareTo(4) == 0) {
-							//verifica se os 4 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
-									StringUtils.isNumeric(player1Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
-									StringUtils.isNumeric(player1Set3ChoiceBox.getSelectionModel().getSelectedItem());
-							if(aux) {
-								int totalPointsSet1 = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem());
-								int totalPointsSet2 = Integer.valueOf(player1Set2ChoiceBox.getSelectionModel().getSelectedItem());
-								int totalPointsSet3 = Integer.valueOf(player1Set3ChoiceBox.getSelectionModel().getSelectedItem());
-								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + Integer.valueOf(player1Set4ChoiceBox.getItems().get(new_value.intValue()));
-								player1TotalPointsTextField.setText(String.valueOf(totalPoints));
-							}
-						} 
-					} else {
-						player1TotalPointsTextField.setText("");
-					}
-				}
-			}
+                if (automaticToggle.isSelected()) {
+                    if (StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0
+                            && StringUtils.isNumeric(player1Set4ChoiceBox.getItems().get(new_value.intValue()))) {
+                        Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
+                        Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
+                        //P2 vence 3-1 ou 4-0, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1,
+                        //logo depois deste pode acertar as contas dos pontos do jogador 1
+                        if (p1SetsResult.compareTo(1) == 0 && p2SetsResult.compareTo(3) == 0 ||
+                                p1SetsResult.compareTo(0) == 0 && p2SetsResult.compareTo(4) == 0 ||
+                                p1SetsResult.compareTo(3) == 0 && p2SetsResult.compareTo(1) == 0) {
+                            //verifica se os 4 sets estao com valores numericos
+                            boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
+                                    StringUtils.isNumeric(player1Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
+                                    StringUtils.isNumeric(player1Set3ChoiceBox.getSelectionModel().getSelectedItem());
+                            System.out.println("AUX AQUI: " + aux);
+                            if (aux) {
+                                //int totalPointsSet1 = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem());
+                                int totalPointsSet1 = auxPointsP1S1;
+                                int totalPointsSet2 = Integer.valueOf(player1Set2ChoiceBox.getSelectionModel().getSelectedItem());
+                                int totalPointsSet3 = Integer.valueOf(player1Set3ChoiceBox.getSelectionModel().getSelectedItem());
+                                int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + Integer.valueOf(player1Set4ChoiceBox.getItems().get(new_value.intValue()));
+                                player1TotalPointsTextField.setText(String.valueOf(totalPoints));
+                            }
+                        } else {
+                            player1TotalPointsTextField.setText("");
+                        }
+                    }
+                }
+            }
 		});
-		
+
 		player1Set5ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0
 							&& StringUtils.isNumeric(player1Set5ChoiceBox.getItems().get(new_value.intValue()))) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P2 vence 3-2, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1, 
+						//P2 vence 3-2, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1,
 						//logo depois deste pode acertar as contas dos pontos do jogador 1
 						if(p1SetsResult.compareTo(2) == 0 && p2SetsResult.compareTo(3) == 0 || p1SetsResult.compareTo(1) == 0 && p2SetsResult.compareTo(4) == 0) {
 							//verifica se os 5 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player1Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
-									StringUtils.isNumeric(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()) && 
+									StringUtils.isNumeric(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player1Set4ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
 								int totalPointsSet1 = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -884,23 +890,23 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player1Set6ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0
 							&& StringUtils.isNumeric(player1Set6ChoiceBox.getItems().get(new_value.intValue()))) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P2 vence 3-2, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1, 
+						//P2 vence 3-2, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1,
 						//logo depois deste pode acertar as contas dos pontos do jogador 1
 						if(p1SetsResult.compareTo(2) == 0 && p2SetsResult.compareTo(4) == 0) {
 							//verifica se os 5 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player1Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
-									StringUtils.isNumeric(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()) && 
-									StringUtils.isNumeric(player1Set4ChoiceBox.getSelectionModel().getSelectedItem()) && 
+									StringUtils.isNumeric(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()) &&
+									StringUtils.isNumeric(player1Set4ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player1Set5ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
 								int totalPointsSet1 = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -908,7 +914,7 @@ public class AddGameSetsController {
 								int totalPointsSet3 = Integer.valueOf(player1Set3ChoiceBox.getSelectionModel().getSelectedItem());
 								int totalPointsSet4 = Integer.valueOf(player1Set4ChoiceBox.getSelectionModel().getSelectedItem());
 								int totalPointsSet5 = Integer.valueOf(player1Set5ChoiceBox.getSelectionModel().getSelectedItem());
-								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + totalPointsSet4 + 
+								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + totalPointsSet4 +
 										totalPointsSet5 + Integer.valueOf(player1Set6ChoiceBox.getItems().get(new_value.intValue()));
 								player1TotalPointsTextField.setText(String.valueOf(totalPoints));
 							}
@@ -919,24 +925,24 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player1Set7ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString()) && new_value.intValue() > 0
 							&& StringUtils.isNumeric(player1Set7ChoiceBox.getItems().get(new_value.intValue()))) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P2 vence 3-2, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1, 
+						//P2 vence 3-2, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 1,
 						//logo depois deste pode acertar as contas dos pontos do jogador 1
 						if(p1SetsResult.compareTo(3) == 0 && p2SetsResult.compareTo(4) == 0) {
 							//verifica se os 5 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player1Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
-									StringUtils.isNumeric(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()) && 
-									StringUtils.isNumeric(player1Set4ChoiceBox.getSelectionModel().getSelectedItem()) && 
-									StringUtils.isNumeric(player1Set5ChoiceBox.getSelectionModel().getSelectedItem()) && 
+									StringUtils.isNumeric(player1Set3ChoiceBox.getSelectionModel().getSelectedItem()) &&
+									StringUtils.isNumeric(player1Set4ChoiceBox.getSelectionModel().getSelectedItem()) &&
+									StringUtils.isNumeric(player1Set5ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player1Set6ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
 								int totalPointsSet1 = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -945,7 +951,7 @@ public class AddGameSetsController {
 								int totalPointsSet4 = Integer.valueOf(player1Set4ChoiceBox.getSelectionModel().getSelectedItem());
 								int totalPointsSet5 = Integer.valueOf(player1Set5ChoiceBox.getSelectionModel().getSelectedItem());
 								int totalPointsSet6 = Integer.valueOf(player1Set6ChoiceBox.getSelectionModel().getSelectedItem());
-								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + totalPointsSet4 + 
+								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + totalPointsSet4 +
 										totalPointsSet5 + totalPointsSet6 + Integer.valueOf(player1Set7ChoiceBox.getItems().get(new_value.intValue()));
 								player1TotalPointsTextField.setText(String.valueOf(totalPoints));
 							}
@@ -956,18 +962,19 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player2Set1ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
 					//casos de 3-1
-					if(StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem()) 
-							&& StringUtils.isNumeric(new_value.toString()) 
-							&& new_value.intValue() > 0 
+					if(StringUtils.isNumeric(player1Set1ChoiceBox.getSelectionModel().getSelectedItem())
+							&& StringUtils.isNumeric(new_value.toString())
+							&& new_value.intValue() > 0
 							&&	StringUtils.isNumeric(player2Set1ChoiceBox.getItems().get(new_value.intValue()))) {
-						
+
 //						Integer p1Pts = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedIndex()-1);
+                        //TODO
 						Integer p1Pts = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem());
 						Integer p2Pts = Integer.valueOf(player2Set1ChoiceBox.getItems().get(new_value.intValue()));
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
@@ -986,7 +993,6 @@ public class AddGameSetsController {
 								player2Set3ChoiceBox.getSelectionModel().select(0);
 								player2Set4ChoiceBox.setItems(pointsMinusList);
 								player2Set4ChoiceBox.getSelectionModel().select(0);
-								player1TotalPointsTextField.setText(String.valueOf(p1Pts + 45));
 							} else {
 								player1Set2ChoiceBox.getSelectionModel().select(1);
 								player1Set3ChoiceBox.getSelectionModel().select(1);
@@ -1029,17 +1035,17 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player2Set2ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
 					System.out.println("new value:" + new_value.intValue());
-					if(StringUtils.isNumeric(player1Set2ChoiceBox.getSelectionModel().getSelectedItem()) 
+					if(StringUtils.isNumeric(player1Set2ChoiceBox.getSelectionModel().getSelectedItem())
 							&& StringUtils.isNumeric(new_value.toString())
 							&& new_value.intValue() > 0
 							&& StringUtils.isNumeric(player2Set2ChoiceBox.getItems().get(new_value.intValue()))) {
-						
+
 						Integer p1Set1Pts = Integer.valueOf(player1Set1ChoiceBox.getSelectionModel().getSelectedItem());
 						Integer p1Set2Pts = Integer.valueOf(player1Set2ChoiceBox.getSelectionModel().getSelectedItem());
 						Integer p2Set1Pts = Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -1104,21 +1110,21 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player2Set3ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) 
-							&& new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString())
+							&& new_value.intValue() > 0
 							&&	StringUtils.isNumeric(player2Set3ChoiceBox.getItems().get(new_value.intValue()))) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P1 vence 3-0, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2, 
+						//P1 vence 3-0, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2,
 						//logo depois deste pode acertar as contas dos pontos do jogador 2
 						if(p1SetsResult.compareTo(3) == 0 && p2SetsResult.compareTo(0) == 0) {
 							//verifica se os 3 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set2ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
 								int totalPointsSet1 = Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -1133,21 +1139,21 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player2Set4ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) 
-							&& new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString())
+							&& new_value.intValue() > 0
 							&&	StringUtils.isNumeric(player2Set4ChoiceBox.getItems().get(new_value.intValue()))) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P1 vence 3-1 ou 4-0, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2, 
+						//P1 vence 3-1 ou 4-0, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2,
 						//logo depois deste pode acertar as contas dos pontos do jogador 2
 						if(p1SetsResult.compareTo(3) == 0 && p2SetsResult.compareTo(1) == 0 || p1SetsResult.compareTo(4) == 0 && p2SetsResult.compareTo(0) == 0) {
 							//verifica se os 4 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set3ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
@@ -1157,30 +1163,30 @@ public class AddGameSetsController {
 								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + Integer.valueOf(player2Set4ChoiceBox.getItems().get(new_value.intValue()));
 								player2TotalPointsTextField.setText(String.valueOf(totalPoints));
 							}
-						} 
+						}
 					} else {
 						player2TotalPointsTextField.setText("");
 					}
 				}
 			}
 		});
-		
+
 		player2Set5ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) 
-							&& new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString())
+							&& new_value.intValue() > 0
 							&&	StringUtils.isNumeric(player2Set5ChoiceBox.getItems().get(new_value.intValue()))) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P1 vence 3-2 ou 4-1, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2, 
+						//P1 vence 3-2 ou 4-1, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2,
 						//logo depois deste pode acertar as contas dos pontos do jogador 2
 						if(p1SetsResult.compareTo(3) == 0 && p2SetsResult.compareTo(2) == 0 || p1SetsResult.compareTo(4) == 0 && p2SetsResult.compareTo(1) == 0) {
 							//verifica se os 5 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
-									StringUtils.isNumeric(player2Set3ChoiceBox.getSelectionModel().getSelectedItem()) && 
+									StringUtils.isNumeric(player2Set3ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set4ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
 								int totalPointsSet1 = Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -1197,24 +1203,24 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player2Set6ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) 
-							&& new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString())
+							&& new_value.intValue() > 0
 							&&	StringUtils.isNumeric(player2Set6ChoiceBox.getSelectionModel().getSelectedItem())) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P1 vence 4-2, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2, 
+						//P1 vence 4-2, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2,
 						//logo depois deste pode acertar as contas dos pontos do jogador 2
 						if(p1SetsResult.compareTo(4) == 0 && p2SetsResult.compareTo(2) == 0) {
 							//verifica se os 5 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
-									StringUtils.isNumeric(player2Set3ChoiceBox.getSelectionModel().getSelectedItem()) && 
-									StringUtils.isNumeric(player2Set4ChoiceBox.getSelectionModel().getSelectedItem()) && 
+									StringUtils.isNumeric(player2Set3ChoiceBox.getSelectionModel().getSelectedItem()) &&
+									StringUtils.isNumeric(player2Set4ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set5ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
 								int totalPointsSet1 = Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -1222,7 +1228,7 @@ public class AddGameSetsController {
 								int totalPointsSet3 = Integer.valueOf(player2Set3ChoiceBox.getSelectionModel().getSelectedItem());
 								int totalPointsSet4 = Integer.valueOf(player2Set4ChoiceBox.getSelectionModel().getSelectedItem());
 								int totalPointsSet5 = Integer.valueOf(player2Set5ChoiceBox.getSelectionModel().getSelectedItem());
-								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + totalPointsSet4 + 
+								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + totalPointsSet4 +
 										totalPointsSet5 + Integer.valueOf(player2Set6ChoiceBox.getItems().get(new_value.intValue()));
 								player2TotalPointsTextField.setText(String.valueOf(totalPoints));
 							}
@@ -1233,25 +1239,25 @@ public class AddGameSetsController {
 				}
 			}
 		});
-		
+
 		player2Set7ChoiceBox.getSelectionModel().selectedIndexProperty().addListener(new
 				ChangeListener<Number>() {
 			public void changed(ObservableValue ov, Number value, Number new_value) {
 				if(automaticToggle.isSelected()) {
-					if(StringUtils.isNumeric(new_value.toString()) 
-							&& new_value.intValue() > 0 
+					if(StringUtils.isNumeric(new_value.toString())
+							&& new_value.intValue() > 0
 							&&	StringUtils.isNumeric(player2Set7ChoiceBox.getSelectionModel().getSelectedItem())) {
 						Integer p1SetsResult = Integer.valueOf(player1SetsWon.getText());
 						Integer p2SetsResult = Integer.valueOf(player2SetsWon.getText());
-						//P1 vence 4-3, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2, 
+						//P1 vence 4-3, logo pelo automatismo, este sera o ultimo set preenchido para o jogador 2,
 						//logo depois deste pode acertar as contas dos pontos do jogador 2
 						if(p1SetsResult.compareTo(4) == 0 && p2SetsResult.compareTo(3) == 0) {
 							//verifica se os 5 sets estao com valores numericos
-							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) && 
+							boolean aux = StringUtils.isNumeric(player2Set1ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set2ChoiceBox.getSelectionModel().getSelectedItem()) &&
-									StringUtils.isNumeric(player2Set3ChoiceBox.getSelectionModel().getSelectedItem()) && 
-									StringUtils.isNumeric(player2Set4ChoiceBox.getSelectionModel().getSelectedItem()) && 
-									StringUtils.isNumeric(player2Set5ChoiceBox.getSelectionModel().getSelectedItem()) && 
+									StringUtils.isNumeric(player2Set3ChoiceBox.getSelectionModel().getSelectedItem()) &&
+									StringUtils.isNumeric(player2Set4ChoiceBox.getSelectionModel().getSelectedItem()) &&
+									StringUtils.isNumeric(player2Set5ChoiceBox.getSelectionModel().getSelectedItem()) &&
 									StringUtils.isNumeric(player2Set6ChoiceBox.getSelectionModel().getSelectedItem());
 							if(aux) {
 								int totalPointsSet1 = Integer.valueOf(player2Set1ChoiceBox.getSelectionModel().getSelectedItem());
@@ -1260,7 +1266,7 @@ public class AddGameSetsController {
 								int totalPointsSet4 = Integer.valueOf(player2Set4ChoiceBox.getSelectionModel().getSelectedItem());
 								int totalPointsSet5 = Integer.valueOf(player2Set5ChoiceBox.getSelectionModel().getSelectedItem());
 								int totalPointsSet6 = Integer.valueOf(player2Set6ChoiceBox.getSelectionModel().getSelectedItem());
-								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + totalPointsSet4 + 
+								int totalPoints = totalPointsSet1 + totalPointsSet2 + totalPointsSet3 + totalPointsSet4 +
 										totalPointsSet5 + totalPointsSet6 + Integer.valueOf(player2Set3ChoiceBox.getItems().get(new_value.intValue()));
 								player2TotalPointsTextField.setText(String.valueOf(totalPoints));
 							}
