@@ -1,8 +1,9 @@
-package main.java.controllers.worldCup;
+package controllers.worldCup;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 import org.apache.log4j.Logger;
 import org.neo4j.ogm.session.Session;
@@ -24,27 +25,27 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import main.java.Main;
-import main.java.config.WorldCupLogDatabaseTestConfiguration;
-import main.java.controllers.ControllersInterface;
-import main.java.controllers.HomeScreenController;
-import main.java.domains.Composed;
-import main.java.domains.GameExt;
-import main.java.domains.IsPartOf;
-import main.java.domains.Participated;
-import main.java.domains.Phase;
-import main.java.domains.Player;
-import main.java.domains.WorldCup;
-import main.java.utils.WorldCupUtils;
+import start.Main;
+import config.WorldCupLogDatabaseTestConfiguration;
+import controllers.ControllersInterface;
+import controllers.HomeScreenController;
+import domains.Composed;
+import domains.GameExt;
+import domains.IsPartOf;
+import domains.Participated;
+import domains.Phase;
+import domains.Player;
+import domains.WorldCup;
+import utils.WorldCupUtils;
 
 @Controller
 public class AddWorldCupGamesController  implements ControllersInterface {
 
 	final static Logger logger = Logger.getLogger(AddWorldCupGamesController.class);
 
-	private static final String ADD_SET_GAME = "/main/resources/views/AddGameScreenSets.fxml";
-	private static final String ADD_POINTS_GAME = "/main/resources/views/AddGameScreen.fxml";
-	private static final String HOMESCREEN = "/main/resources/views/HomeScreen.fxml";
+	private static final String ADD_SET_GAME = "/views/AddGameScreenSets.fxml";
+	private static final String ADD_POINTS_GAME = "/views/AddGameScreen.fxml";
+	private static final String HOMESCREEN = "/views/HomeScreen.fxml";
 
 	private AddGameController addGameController;
 	private AddGameSetsController addGameSetsController;

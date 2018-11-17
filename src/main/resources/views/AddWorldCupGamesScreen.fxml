@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.worldCup.AddWorldCupGamesController">
+<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.worldCup.AddWorldCupGamesController">
 	<children>
 		<Label layoutX="51.0" layoutY="43.0" text="World Cup Games" textFill="#71afe9">
 			<font>

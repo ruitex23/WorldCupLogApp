@@ -1,9 +1,8 @@
 /**
  * 
  */
-package main.java.config;
+package config;
 
-import java.io.File;
 
 import org.neo4j.ogm.session.SessionFactory;
 import org.springframework.context.annotation.Bean;
@@ -20,10 +19,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class WorldCupLogDatabaseTestConfiguration extends Neo4jConfiguration {
 
-
-	public static final String URL_MAC = "file:///Users/ruitex23/Documents/Trabalho/databases/worldcuplog.graphdb";
-	public static final String URL_WIN = "file:///C:/WorldCupDatabase";
-	public static final File url = new File("\\databases\\worldcuplog.graphdb");
+//
+//	public static final String URL_MAC = "file:///Users/ruitex23/Documents/Trabalho/databases/worldcuplog.graphdb";
+//	public static final String URL_WIN = "file:///C:/WorldCupDatabase";
+//	public static final File url = new File("\\databases\\worldcuplog.graphdb");
 	public static final String URL_BOLT = "bolt://bert:123@localhost";
 
 	@Bean
@@ -47,7 +46,7 @@ public class WorldCupLogDatabaseTestConfiguration extends Neo4jConfiguration {
 	@Override
 	public SessionFactory getSessionFactory() {
 		System.out.println("getSessionFactory");
-		return new SessionFactory(getConfiguration(), "main.java.domains");
+		return new SessionFactory(getConfiguration(), "domains");
 	}
 
 }

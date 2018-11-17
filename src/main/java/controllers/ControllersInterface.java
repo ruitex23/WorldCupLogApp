@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.controllers;
+package controllers;
 
 /**
  * @author ruitex23

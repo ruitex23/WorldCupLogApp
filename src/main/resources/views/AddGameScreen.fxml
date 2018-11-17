@@ -8,7 +8,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="481.0" prefWidth="700.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.worldCup.AddGameController">
+<AnchorPane prefHeight="481.0" prefWidth="700.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.worldCup.AddGameController">
 	<children>
 		<Label layoutX="64.0" layoutY="31.0" text="Add Game" textFill="#71afe9">
 			<font>

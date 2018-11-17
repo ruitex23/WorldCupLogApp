@@ -1,4 +1,4 @@
-package main.java.domains;
+package domains;
 
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;

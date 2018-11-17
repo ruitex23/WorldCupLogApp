@@ -1,34 +1,28 @@
 /**
  * 
  */
-package main.java.controllers.players;
+package controllers.players;
+
+import com.jfoenix.controls.JFXTextField;
+import domains.Player;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import org.apache.commons.lang.StringUtils;
+import utils.WorldCupUtils;
 
 import java.io.File;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-import org.apache.commons.lang.StringUtils;
-
-import com.jfoenix.controls.JFXTextField;
-
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-import main.java.domains.Player;
-import main.java.utils.WorldCupUtils;
 
 /**
  * @author ruitex23
@@ -85,7 +79,7 @@ public class AddEditPlayerController {
 		}
 		confederationsCB.getSelectionModel().select(this.player.getConfederation());
 		if(StringUtils.isNotBlank(player.getCountry())) {
-			flagIV.setImage(new Image("/main/resources/flags-normal/" + 
+			flagIV.setImage(new Image("/main/resources/flags-normal/" +
 					WorldCupUtils.getCountryCodeByDescription(this.player.getCountry()).toLowerCase()+ ".png"));
 			countryLabel.setText(this.player.getCountry());
 		}
@@ -144,12 +138,12 @@ public class AddEditPlayerController {
 	}
 
 	private void openFile(File file) {
-		File newFile = new File(getClass().getResource("/main/resources/" + lastnameTF.getText() + ".jpg").toExternalForm());
-		file.renameTo(newFile);
-		System.out.println(newFile.toURI().toString());
-		player.setProfilePicturePath(newFile.toURI().toString());
-		Image image = new Image(newFile.toURI().toString());
-		profilePictureIV.setImage(image);
+//		File newFile = new File(getClass().getResource("/main/resources/" + lastnameTF.getText() + ".jpg").toExternalForm());
+//		file.renameTo(newFile);
+//		System.out.println(newFile.toURI().toString());
+//		player.setProfilePicturePath(newFile.toURI().toString());
+//		Image image = new Image(newFile.toURI().toString());
+//		profilePictureIV.setImage(image);
 	}
 
 	private ImageView getIcon(String resourcePath) {
@@ -202,421 +196,421 @@ public class AddEditPlayerController {
 	 */
 	private void setupFlags() {
 		//Argentina
-		ImageView imageViewAR = this.getIcon("/main/resources/flags-mini/ar.png");
+		ImageView imageViewAR = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewAR.setFitHeight(23.0);
 		imageViewAR.setFitWidth(35.0);
 		MenuItem menuItemAR = new MenuItem(WorldCupUtils.ARGENTINA_CODE, imageViewAR);
 		menuItemAR.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/ar.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemAR.getText()));
 		    System.out.println("menuItemAR");
 		    player.setCountry(WorldCupUtils.ARGENTINA_DESC);
 		});
 		menuButton.getItems().add(menuItemAR);
 		//Austria
-		ImageView imageViewAT = this.getIcon("/main/resources/flags-mini/at.png");
+		ImageView imageViewAT = this.getIcon(getClass().getResource("/flags-mini/at.png").toString());
 		imageViewAT.setFitHeight(23.0);
 		imageViewAT.setFitWidth(35.0);
 		MenuItem menuItemAT = new MenuItem(WorldCupUtils.AUSTRIA_CODE, imageViewAT);
 		menuButton.getItems().add(menuItemAT);
 		menuItemAT.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/at.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemAT.getText()));
 		    System.out.println("menuItemAT");
 		    player.setCountry(WorldCupUtils.AUSTRIA_DESC);
 		});
 		//Australia
-		ImageView imageViewAU = this.getIcon("/main/resources/flags-mini/au.png");
+		ImageView imageViewAU = this.getIcon(getClass().getResource("/flags-mini/au.png").toString());
 		imageViewAU.setFitHeight(23.0);
 		imageViewAU.setFitWidth(35.0);
 		MenuItem menuItemAU = new MenuItem(WorldCupUtils.AUSTRALIA_CODE, imageViewAU);
 		menuButton.getItems().add(menuItemAU);
 		menuItemAU.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/au.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemAU.getText()));
 		    System.out.println("menuItemAU");
 		    player.setCountry(WorldCupUtils.AUSTRALIA_DESC);
 		});
 		//Belgica
-		ImageView imageViewBE = this.getIcon("/main/resources/flags-mini/be.png");
+		ImageView imageViewBE = this.getIcon(getClass().getResource("/flags-mini/be.png").toString());
 		imageViewBE.setFitHeight(23.0);
 		imageViewBE.setFitWidth(35.0);
 		MenuItem menuItemBE = new MenuItem(WorldCupUtils.BELGIUM_CODE, imageViewBE);
 		menuButton.getItems().add(menuItemBE);
 		menuItemBE.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/be.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemBE.getText()));
 		    System.out.println("menuItemBE");
 		    player.setCountry(WorldCupUtils.BELGIUM_DESC);
 		});
 		//Bolivia
-		ImageView imageViewBO = this.getIcon("/main/resources/flags-mini/bo.png");
+		ImageView imageViewBO = this.getIcon(getClass().getResource("/flags-mini/bo.png").toString());
 		imageViewBO.setFitHeight(23.0);
 		imageViewBO.setFitWidth(35.0);
 		MenuItem menuItemBO = new MenuItem(WorldCupUtils.BOLIVIA_CODE, imageViewBO);
 		menuButton.getItems().add(menuItemBO);
 		menuItemBO.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/bo.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemBO.getText()));
 		    System.out.println("menuItemBO");
 		    player.setCountry(WorldCupUtils.BOLIVIA_DESC);
 		});
 		//Brasil
-		ImageView imageViewBR = this.getIcon("/main/resources/flags-mini/br.png");
+		ImageView imageViewBR = this.getIcon(getClass().getResource("/flags-mini/br.png").toString());
 		imageViewBR.setFitHeight(23.0);
 		imageViewBR.setFitWidth(35.0);
 		MenuItem menuItemBR = new MenuItem(WorldCupUtils.BRASIL_CODE, imageViewBR);
 		menuButton.getItems().add(menuItemBR);
 		menuItemBR.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/br.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemBR.getText()));
 		    System.out.println("menuItemBR");
 		    player.setCountry(WorldCupUtils.BRASIL_DESC);
 		});
 		//Czech Republic
-		ImageView imageViewCZ = this.getIcon("/main/resources/flags-mini/cz.png");
+		ImageView imageViewCZ = this.getIcon(getClass().getResource("/flags-mini/cz.png").toString());
 		imageViewCZ.setFitHeight(23.0);
 		imageViewCZ.setFitWidth(35.0);
 		MenuItem menuItemCZ = new MenuItem(WorldCupUtils.CZECHREP_CODE, imageViewCZ);
 		menuButton.getItems().add(menuItemCZ);
 		menuItemCZ.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/cz.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemCZ.getText()));
 		    System.out.println("menuItemCZ");
 		    player.setCountry(WorldCupUtils.CZECHREP_DESC);
 		});
 		//Cyprus
-		ImageView imageViewCY = this.getIcon("/main/resources/flags-mini/cy.png");
+		ImageView imageViewCY = this.getIcon(getClass().getResource("/flags-mini/cy.png").toString());
 		imageViewCY.setFitHeight(23.0);
 		imageViewCY.setFitWidth(35.0);
 		MenuItem menuItemCY = new MenuItem(WorldCupUtils.CYPRUS_CODE, imageViewCY);
 		menuButton.getItems().add(menuItemCY);
 		menuItemCY.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/cy.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemCY.getText()));
 		    System.out.println("menuItemCY");
 		    player.setCountry(WorldCupUtils.CYPRUS_DESC);
 		});
 		//Colombia
-		ImageView imageViewCO = this.getIcon("/main/resources/flags-mini/co.png");
+		ImageView imageViewCO = this.getIcon(getClass().getResource("/flags-mini/co.png").toString());
 		imageViewCO.setFitHeight(23.0);
 		imageViewCO.setFitWidth(35.0);
 		MenuItem menuItemCO = new MenuItem(WorldCupUtils.COLOMBIA_CODE, imageViewCO);
 		menuButton.getItems().add(menuItemCO);
 		menuItemCO.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/co.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemCO.getText()));
 		    System.out.println("menuItemCO");
 		    player.setCountry(WorldCupUtils.COLOMBIA_DESC);
 		});
 		//Costa Rica
-		ImageView imageViewCR = this.getIcon("/main/resources/flags-mini/cr.png");
+		ImageView imageViewCR = this.getIcon(getClass().getResource("/flags-mini/cr.png").toString());
 		imageViewCR.setFitHeight(23.0);
 		imageViewCR.setFitWidth(35.0);
 		MenuItem menuItemCR = new MenuItem(WorldCupUtils.COSTARICA_CODE, imageViewCR);
 		menuButton.getItems().add(menuItemCR);
 		menuItemCR.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/cr.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemCR.getText()));
 		    System.out.println("menuItemCR");
 		    player.setCountry(WorldCupUtils.COSTARICA_DESC);
 		});
 		//Denmark
-		ImageView imageViewDK = this.getIcon("/main/resources/flags-mini/dk.png");
+		ImageView imageViewDK = this.getIcon(getClass().getResource("/flags-mini/dk.png").toString());
 		imageViewDK.setFitHeight(23.0);
 		imageViewDK.setFitWidth(35.0);
 		MenuItem menuItemDK = new MenuItem(WorldCupUtils.DENMARK_CODE, imageViewDK);
 		menuButton.getItems().add(menuItemDK);
 		menuItemDK.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/dk.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemDK.getText()));
 		    System.out.println("menuItemDK");
 		    player.setCountry(WorldCupUtils.DENMARK_DESC);
 		});
 		//Ecuador
-		ImageView imageViewEC = this.getIcon("/main/resources/flags-mini/ec.png");
+		ImageView imageViewEC = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewEC.setFitHeight(23.0);
 		imageViewEC.setFitWidth(35.0);
 		MenuItem menuItemEC = new MenuItem(WorldCupUtils.ECUADOR_CODE, imageViewEC);
 		menuButton.getItems().add(menuItemEC);
 		menuItemEC.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/ec.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemEC.getText()));
 		    System.out.println("menuItemEC");
 		    player.setCountry(WorldCupUtils.ECUADOR_DESC);
 		});
 		//Egypt
-		ImageView imageViewEG = this.getIcon("/main/resources/flags-mini/eg.png");
+		ImageView imageViewEG = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewEG.setFitHeight(23.0);
 		imageViewEG.setFitWidth(35.0);
 		MenuItem menuItemEG = new MenuItem(WorldCupUtils.EGYPT_CODE, imageViewEG);
 		menuButton.getItems().add(menuItemEG);
 		menuItemEG.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/eg.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemEG.getText()));
 		    System.out.println("menuItemEG");
 		    player.setCountry(WorldCupUtils.EGYPT_DESC);
 		});
 		//France
-		ImageView imageViewFR = this.getIcon("/main/resources/flags-mini/fr.png");
+		ImageView imageViewFR = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewFR.setFitHeight(23.0);
 		imageViewFR.setFitWidth(35.0);
 		MenuItem menuItemFR = new MenuItem(WorldCupUtils.FRANCE_CODE, imageViewFR);
 		menuButton.getItems().add(menuItemFR);
 		menuItemFR.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/fr.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemFR.getText()));
 		    System.out.println("menuItemFR");
 		    player.setCountry(WorldCupUtils.FRANCE_DESC);
 		});
 		//Finland
-		ImageView imageViewFI = this.getIcon("/main/resources/flags-mini/fi.png");
+		ImageView imageViewFI = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewFI.setFitHeight(23.0);
 		imageViewFI.setFitWidth(35.0);
 		MenuItem menuItemFI = new MenuItem(WorldCupUtils.FINLAND_CODE, imageViewFI);
 		menuButton.getItems().add(menuItemFI);
 		menuItemFI.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/fi.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemFI.getText()));
 		    System.out.println("menuItemFI");
 		    player.setCountry(WorldCupUtils.FINLAND_DESC);
 		});
 		//Germany
-		ImageView imageViewDE = this.getIcon("/main/resources/flags-mini/de.png");
+		ImageView imageViewDE = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewDE.setFitHeight(23.0);
 		imageViewDE.setFitWidth(35.0);
 		MenuItem menuItemDE = new MenuItem(WorldCupUtils.GERMANY_CODE, imageViewDE);
 		menuButton.getItems().add(menuItemDE);
 		menuItemDE.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/de.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemDE.getText()));
 		    System.out.println("menuItemDE");
 		    player.setCountry(WorldCupUtils.GERMANY_DESC);
 		});
 		//Greece
-		ImageView imageViewGR = this.getIcon("/main/resources/flags-mini/gr.png");
+		ImageView imageViewGR = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewGR.setFitHeight(23.0);
 		imageViewGR.setFitWidth(35.0);
 		MenuItem menuItemGR = new MenuItem(WorldCupUtils.GREECE_CODE, imageViewGR);
 		menuButton.getItems().add(menuItemGR);
 		menuItemGR.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/gr.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemGR.getText()));
 		    System.out.println("menuItemGR");
 		    player.setCountry(WorldCupUtils.GREECE_DESC);
 		});
 		//Guatemala
-		ImageView imageViewGT = this.getIcon("/main/resources/flags-mini/gt.png");
+		ImageView imageViewGT = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewGT.setFitHeight(23.0);
 		imageViewGT.setFitWidth(35.0);
 		MenuItem menuItemGT = new MenuItem(WorldCupUtils.GUATEMALA_CODE, imageViewGT);
 		menuButton.getItems().add(menuItemGT);
 		menuItemGT.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/gt.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemGT.getText()));
 		    System.out.println("menuItemGT");
 		    player.setCountry(WorldCupUtils.GUATEMALA_DESC);
 		});
 		//Italy
-		ImageView imageViewIT = this.getIcon("/main/resources/flags-mini/it.png");
+		ImageView imageViewIT = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewIT.setFitHeight(23.0);
 		imageViewIT.setFitWidth(35.0);
 		MenuItem menuItemIT = new MenuItem(WorldCupUtils.ITALY_CODE, imageViewIT);
 		menuButton.getItems().add(menuItemIT);
 		menuItemIT.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/it.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemIT.getText()));
 		    System.out.println("menuItemIT");
 		    player.setCountry(WorldCupUtils.ITALY_DESC);
 		});
 		//Japan
-		ImageView imageViewJP = this.getIcon("/main/resources/flags-mini/jp.png");
+		ImageView imageViewJP = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewJP.setFitHeight(23.0);
 		imageViewJP.setFitWidth(35.0);
 		MenuItem menuItemJP = new MenuItem(WorldCupUtils.JAPAN_CODE, imageViewJP);
 		menuButton.getItems().add(menuItemJP);
 		menuItemJP.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/jp.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemJP.getText()));
 		    System.out.println("menuItemJP");
 		    player.setCountry(WorldCupUtils.JAPAN_DESC);
 		});
 		//Jordan
-		ImageView imageViewJO = this.getIcon("/main/resources/flags-mini/jo.png");
+		ImageView imageViewJO = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewJO.setFitHeight(23.0);
 		imageViewJO.setFitWidth(35.0);
 		MenuItem menuItemJO = new MenuItem(WorldCupUtils.JORDAN_CODE, imageViewJO);
 		menuButton.getItems().add(menuItemJO);
 		menuItemJO.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/jo.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemJO.getText()));
 		    System.out.println("menuItemJO");
 		    player.setCountry(WorldCupUtils.JORDAN_DESC);
 		});
 		//Luxembourg
-		ImageView imageViewLU = this.getIcon("/main/resources/flags-mini/lu.png");
+		ImageView imageViewLU = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewLU.setFitHeight(23.0);
 		imageViewLU.setFitWidth(35.0);
 		MenuItem menuItemLU = new MenuItem(WorldCupUtils.LUXEMBOURG_CODE, imageViewLU);
 		menuButton.getItems().add(menuItemLU);
 		menuItemLU.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/lu.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemLU.getText()));
 		    System.out.println("menuItemLU");
 		    player.setCountry(WorldCupUtils.LUXEMBOURG_DESC);
 		});
 		//Mexico
-		ImageView imageViewMX = this.getIcon("/main/resources/flags-mini/mx.png");
+		ImageView imageViewMX = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewMX.setFitHeight(23.0);
 		imageViewMX.setFitWidth(35.0);
 		MenuItem menuItemMX = new MenuItem(WorldCupUtils.MEXICO_CODE, imageViewMX);
 		menuButton.getItems().add(menuItemMX);
 		menuItemMX.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/mx.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemMX.getText()));
 		    System.out.println("menuItemMX");
 		    player.setCountry(WorldCupUtils.MEXICO_DESC);
 		});
 		//Netherlands
-		ImageView imageViewNL = this.getIcon("/main/resources/flags-mini/nl.png");
+		ImageView imageViewNL = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewNL.setFitHeight(23.0);
 		imageViewNL.setFitWidth(35.0);
 		MenuItem menuItemNL = new MenuItem(WorldCupUtils.NETHERLANDS_CODE, imageViewNL);
 		menuButton.getItems().add(menuItemNL);
 		menuItemNL.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/nl.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemNL.getText()));
 		    System.out.println("menuItemNL");
 		    player.setCountry(WorldCupUtils.NETHERLANDS_DESC);
 		});
 		//Portugal
-		ImageView imageViewPT = this.getIcon("/main/resources/flags-mini/pt.png");
+		ImageView imageViewPT = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewPT.setFitHeight(23.0);
 		imageViewPT.setFitWidth(35.0);
 		MenuItem menuItemPT = new MenuItem(WorldCupUtils.PORTUGAL_CODE, imageViewPT);
 		menuButton.getItems().add(menuItemPT);
 		menuItemPT.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/pt.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemPT.getText()));
 		    System.out.println("menuItemPT");
 		    player.setCountry(WorldCupUtils.PORTUGAL_DESC);
 		});
 		//Peru
-		ImageView imageViewPE = this.getIcon("/main/resources/flags-mini/pe.png");
+		ImageView imageViewPE = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewPE.setFitHeight(23.0);
 		imageViewPE.setFitWidth(35.0);
 		MenuItem menuItemPE = new MenuItem(WorldCupUtils.PERU_CODE, imageViewPE);
 		menuButton.getItems().add(menuItemPE);
 		menuItemPE.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/pe.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemPE.getText()));
 		    System.out.println("menuItemPE");
 		    player.setCountry(WorldCupUtils.PERU_DESC);
 		});
 		//Sweden
-		ImageView imageViewSE = this.getIcon("/main/resources/flags-mini/se.png");
+		ImageView imageViewSE = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewSE.setFitHeight(23.0);
 		imageViewSE.setFitWidth(35.0);
 		MenuItem menuItemSE = new MenuItem(WorldCupUtils.SWEDEN_CODE, imageViewSE);
 		menuButton.getItems().add(menuItemSE);
 		menuItemSE.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/se.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemSE.getText()));
 		    System.out.println("menuItemSE");
 		    player.setCountry(WorldCupUtils.SWEDEN_DESC);
 		});
 		//Spain
-		ImageView imageViewES = this.getIcon("/main/resources/flags-mini/es.png");
+		ImageView imageViewES = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewES.setFitHeight(23.0);
 		imageViewES.setFitWidth(35.0);
 		MenuItem menuItemES = new MenuItem(WorldCupUtils.SPAIN_CODE, imageViewES);
 		menuButton.getItems().add(menuItemES);
 		menuItemES.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/es.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemES.getText()));
 		    System.out.println("menuItemES");
 		    player.setCountry(WorldCupUtils.SPAIN_DESC);
 		});
 		//Switzerland
-		ImageView imageViewCH = this.getIcon("/main/resources/flags-mini/ch.png");
+		ImageView imageViewCH = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewCH.setFitHeight(23.0);
 		imageViewCH.setFitWidth(35.0);
 		MenuItem menuItemCH = new MenuItem(WorldCupUtils.SWITZERLAND_CODE, imageViewCH);
 		menuButton.getItems().add(menuItemCH);
 		menuItemCH.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/ch.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemCH.getText()));
 		    System.out.println("menuItemCH");
 		    player.setCountry(WorldCupUtils.SWITZERLAND_DESC);
 		});
 		//South Korea
-		ImageView imageViewKP = this.getIcon("/main/resources/flags-mini/kr.png");
+		ImageView imageViewKP = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewKP.setFitHeight(23.0);
 		imageViewKP.setFitWidth(35.0);
 		MenuItem menuItemKP = new MenuItem(WorldCupUtils.SOUTHKOREA_CODE, imageViewKP);
 		menuButton.getItems().add(menuItemKP);
 		menuItemKP.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/kr.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemKP.getText()));
 		    System.out.println("menuItemKP");
 		    player.setCountry(WorldCupUtils.SOUTHKOREA_DESC);
 		});
 		//Turkey
-		ImageView imageViewTR = this.getIcon("/main/resources/flags-mini/tr.png");
+		ImageView imageViewTR = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewTR.setFitHeight(23.0);
 		imageViewTR.setFitWidth(35.0);
 		MenuItem menuItemTR = new MenuItem(WorldCupUtils.TURKEY_CODE, imageViewTR);
 		menuButton.getItems().add(menuItemTR);
 		menuItemTR.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/tr.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemTR.getText()));
 		    System.out.println("menuItemTR");
 		    player.setCountry(WorldCupUtils.TURKEY_DESC);
 		});
 		//US
-		ImageView imageViewUS = this.getIcon("/main/resources/flags-mini/us.png");
+		ImageView imageViewUS = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewUS.setFitHeight(23.0);
 		imageViewUS.setFitWidth(35.0);
 		MenuItem menuItemUS = new MenuItem(WorldCupUtils.US_CODE, imageViewUS);
 		menuButton.getItems().add(menuItemUS);
 		menuItemUS.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/us.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemUS.getText()));
 		    System.out.println("menuItemUS");
 		    player.setCountry(WorldCupUtils.US_DESC);
 		});
 		//Vietnam
-		ImageView imageViewVN = this.getIcon("/main/resources/flags-mini/vn.png");
+		ImageView imageViewVN = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewVN.setFitHeight(23.0);
 		imageViewVN.setFitWidth(35.0);
 		MenuItem menuItemVN = new MenuItem(WorldCupUtils.VIETNAM_CODE, imageViewVN);
 		menuButton.getItems().add(menuItemVN);
 		menuItemVN.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/vn.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemVN.getText()));
 		    System.out.println("menuItemVN");
 		    player.setCountry(WorldCupUtils.VIETNAM_DESC);
 		});
 		//Venezuela
-		ImageView imageViewVE = this.getIcon("/main/resources/flags-mini/ve.png");
+		ImageView imageViewVE = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewVE.setFitHeight(23.0);
 		imageViewVE.setFitWidth(35.0);
 		MenuItem menuItemVE = new MenuItem(WorldCupUtils.VENEZUELA_CODE, imageViewVE);
 		menuButton.getItems().add(menuItemVE);
 		menuItemVE.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/ve.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemVE.getText()));
 		    System.out.println("menuItemVE");
 		    player.setCountry(WorldCupUtils.VENEZUELA_DESC);
 		});
 		//United Kingdom
-		ImageView imageViewGB = this.getIcon("/main/resources/flags-mini/gb.png");
+		ImageView imageViewGB = this.getIcon(getClass().getResource("/flags-mini/ar.png").toString());
 		imageViewGB.setFitHeight(23.0);
 		imageViewGB.setFitWidth(35.0);
 		MenuItem menuItemGB = new MenuItem(WorldCupUtils.UK_CODE, imageViewGB);
 		menuButton.getItems().add(menuItemGB);
 		menuItemGB.setOnAction(event -> {
-			flagIV.setImage(new Image("/main/resources/flags-normal/gb.png"));
+			flagIV.setImage(new Image(getClass().getResource("/flags-normal/ar.png").toString()));
 			countryLabel.setText(countriesHM.get(menuItemGB.getText()));
 		    System.out.println("menuItemGB");
 		    player.setCountry(WorldCupUtils.UK_DESC);

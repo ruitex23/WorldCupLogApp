@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.controllers.players;
+package controllers.players;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,7 +9,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import config.WorldCupLogDatabaseTestConfiguration;
+import controllers.ControllersInterface;
+import domains.Player;
+import domains.WorldCup;
 import org.apache.commons.lang.StringUtils;
+import org.neo4j.ogm.cypher.query.SortOrder;
 import org.neo4j.ogm.session.Session;
 import org.neo4j.ogm.session.SessionFactory;
 import org.springframework.test.context.ContextConfiguration;
@@ -34,12 +39,9 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import main.java.Main;
-import main.java.config.WorldCupLogDatabaseTestConfiguration;
-import main.java.controllers.ControllersInterface;
-import main.java.domains.Player;
-import main.java.domains.WorldCup;
-import main.java.utils.WorldCupUtils;
+import start.Main;
+import utils.WorldCupUtils;
+
 
 /**
  * @author ruitex23
@@ -66,10 +68,10 @@ public class ConsultPlayersController implements ControllersInterface {
 	private SessionFactory sessionFactory;
 	final FileChooser fileChooser = new FileChooser();
 	private Stage popupStage;
-	private static final String ADD_PLAYER_SCREEN = "/main/resources/views/AddEditPlayerScreen.fxml";
+	private static final String ADD_PLAYER_SCREEN = "/views/AddEditPlayerScreen.fxml";
 	private Session session;
-	private static final String DEFAULT_PICTURE = "/main/resources/default.png";
-	private static final String DEFAULT_PICTURE_LIST = "/main/resources/playerDefault.png";
+	private static final String DEFAULT_PICTURE = "/default.png";
+	private static final String DEFAULT_PICTURE_LIST = "/playerDefault.png";
 
 	public void setStage(Stage stage) {
 		this.primaryStage = stage;
@@ -93,7 +95,7 @@ public class ConsultPlayersController implements ControllersInterface {
 				System.out.println("Estou nulo. Cant do shit.");
 			} else {
 				System.out.println("Não estou nulo. Doing something.");
-				addedPlayers = (List<Player>) session.loadAll(Player.class);
+				addedPlayers = (List<Player>) session.loadAll(Player.class, new SortOrder().add(SortOrder.Direction.DESC,"lastName"));
 				if(addedPlayers != null && addedPlayers.size() > 0) {
 					System.out.println("123");
 					WorldCupUtils.sortPlayers(addedPlayers);
@@ -132,15 +134,15 @@ public class ConsultPlayersController implements ControllersInterface {
 						confederationLabel.setText(player.getConfederation());
 					}
 					if(StringUtils.isBlank(player.getProfilePicturePath())) {
-						profilePictureIV.setImage(new Image(DEFAULT_PICTURE));
+						profilePictureIV.setImage(new Image(getClass().getResource(DEFAULT_PICTURE).toString()));
 					} else {
 						profilePictureIV.setImage(new Image(player.getProfilePicturePath()));
 					}
 					if(StringUtils.isNotBlank(player.getCountry())) {
 						countryLabel.setText(player.getCountry());
-						flagIV.setImage(new Image("/main/resources/flags-normal/" + 
+						flagIV.setImage(new Image(getClass().getResource("/flags-normal/" +
 								WorldCupUtils.getCountryCodeByDescription(player.getCountry()).toLowerCase() +
-								".png"));
+								".png").toString()));
 						flagIV.setFitHeight(37);
 						flagIV.setFitWidth(54);
 					}
@@ -156,6 +158,7 @@ public class ConsultPlayersController implements ControllersInterface {
 	private void updatePlayersInfoFromDB(Player player) {
 		//list of WC participated
 		List<WorldCup> playerWorldCups = getPlayerWorldCups(player.getFirstName());
+		System.out.println("AQUI BOY: " + playerWorldCups.size());
 		if(playerWorldCups.size() > 0) {
 			playersWorldCupsListView.setItems(FXCollections.observableArrayList(getPlayerWorldCups(player.getFirstName())));
 		} else {
@@ -255,7 +258,7 @@ public class ConsultPlayersController implements ControllersInterface {
 		Parent root;
 		try {
 			popupStage = new Stage();
-			loader = new FXMLLoader(Main.class.getResource(ADD_PLAYER_SCREEN));
+			loader = new FXMLLoader(getClass().getResource(ADD_PLAYER_SCREEN));
 			root = (Parent) loader.load();
 			AddEditPlayerController addPlayerController = loader.getController();
 			addPlayerController.setPreviousController(this);

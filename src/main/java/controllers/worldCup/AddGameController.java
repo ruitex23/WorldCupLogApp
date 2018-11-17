@@ -1,10 +1,14 @@
 /**
  * 
  */
-package main.java.controllers.worldCup;
+package controllers.worldCup;
 
 import java.util.List;
 
+import domains.Game;
+import domains.GameExt;
+import domains.Player;
+import domains.WorldCup;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 
@@ -21,11 +25,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
-import main.java.domains.Game;
-import main.java.domains.GameExt;
-import main.java.domains.Player;
-import main.java.domains.WorldCup;
-import main.java.utils.WorldCupUtils;
+import utils.WorldCupUtils;
 
 /**
  * @author ruitex23

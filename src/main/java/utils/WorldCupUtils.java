@@ -1,4 +1,4 @@
-package main.java.utils;
+package utils;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import main.java.domains.Player;
+import domains.Player;
 
 public class WorldCupUtils {
 

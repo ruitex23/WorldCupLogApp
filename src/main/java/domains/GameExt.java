@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.domains;
+package domains;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;

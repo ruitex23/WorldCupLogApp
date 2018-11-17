@@ -1,10 +1,12 @@
 /**
  * 
  */
-package main.java.controllers;
+package controllers;
 
 import java.io.IOException;
 
+import controllers.players.ConsultPlayersController;
+import controllers.worldCup.CreateWorldCupController;
 import org.springframework.stereotype.Controller;
 
 import javafx.event.ActionEvent;
@@ -15,9 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import main.java.Main;
-import main.java.controllers.players.ConsultPlayersController;
-import main.java.controllers.worldCup.CreateWorldCupController;
+import start.Main;
 
 /**
  * @author ruitex23
@@ -50,7 +50,7 @@ public class HomeScreenController  implements ControllersInterface {
 				System.out.println("The queue is not empty. Should see this message only once in the beggining of the app");
 			}
 			System.out.println("Entrei no goToCreateWorldCupScreen");
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/resources/views/CreateWorldCupScreen.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/CreateWorldCupScreen.fxml"));
 			Parent root = (Parent) loader.load();
 			CreateWorldCupController controller = loader.getController();
 			controller.primaryStage = this.primaryStage;
@@ -74,7 +74,7 @@ public class HomeScreenController  implements ControllersInterface {
 				System.out.println("The queue is not empty. Should see this message only once in the beggining of the app");
 			}
 			System.out.println("Entrei no goToPlayersScreen");
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/resources/views/ConsultPlayersScreen.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/ConsultPlayersScreen.fxml"));
 			Parent root = (Parent) loader.load();
 			ConsultPlayersController controller = loader.getController();
 			controller.primaryStage = this.primaryStage;
@@ -92,14 +92,14 @@ public class HomeScreenController  implements ControllersInterface {
 	//	@FXML
 	//	private void goToCreateWorldCupScreen(ActionEvent event){
 	//		try {
-	//			if(Main.screens.size() == 0) {
-	//				Main.screens.push(this.primaryStage.getScene().getRoot());
-	//				System.out.println("Add HomeScreen to the queue because it's empty: " + Main.screens.size());
+	//			if(start.screens.size() == 0) {
+	//				start.screens.push(this.primaryStage.getScene().getRoot());
+	//				System.out.println("Add HomeScreen to the queue because it's empty: " + start.screens.size());
 	//			} else {
 	//				System.out.println("The queue is not empty. Should see this message only once in the beggining of the app");
 	//			}
 	//			System.out.println("Entrei no goToCreateWorldCupScreen");
-	//			Parent root = FXMLLoader.load(Main.class.getResource("views/WorldCup/CreateWorldCupScreen.fxml"));
+	//			Parent root = FXMLLoader.load(start.class.getResource("views/WorldCup/CreateWorldCupScreen.fxml"));
 	//			System.out.println("HomeScreenController -> CreateWorldCupController");
 	//			Scene scene = new Scene(root);
 	//			scene.getStylesheets().add(getClass().getResource("../application.css").toExternalForm());
@@ -115,7 +115,7 @@ public class HomeScreenController  implements ControllersInterface {
 	//	@FXML
 	//	private void goToCreateWorldCupScreen(ActionEvent event){
 	//		try {
-	//			FXMLLoader loader = new FXMLLoader(Main.class.getResource("views/WorldCup/CreateWorldCupScreen.fxml"));
+	//			FXMLLoader loader = new FXMLLoader(start.class.getResource("views/WorldCup/CreateWorldCupScreen.fxml"));
 	//			anchorPane = (AnchorPane) loader.load();
 	//			CreateWorldCupController controller = loader.getController();
 	//			controller.setStage(primaryStage);
@@ -137,7 +137,7 @@ public class HomeScreenController  implements ControllersInterface {
 
 	//    @FXML
 	//    private void goToScreen3(ActionEvent event){
-	//       myController.setScreen(Main.screen3ID);
+	//       myController.setScreen(start.screen3ID);
 	//    }
 
 }

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.domains;
+package domains;
 
 import org.neo4j.ogm.annotation.EndNode;
 import org.neo4j.ogm.annotation.GraphId;

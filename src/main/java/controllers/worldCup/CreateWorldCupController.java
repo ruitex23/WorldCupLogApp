@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.controllers.worldCup;
+package controllers.worldCup;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,13 +32,13 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
-import main.java.Main;
-import main.java.config.WorldCupLogDatabaseTestConfiguration;
-import main.java.controllers.ControllersInterface;
-import main.java.controllers.players.ConsultPlayersController;
-import main.java.domains.Player;
-import main.java.domains.WorldCup;
-import main.java.utils.WorldCupUtils;
+import start.Main;
+import config.WorldCupLogDatabaseTestConfiguration;
+import controllers.ControllersInterface;
+import controllers.players.ConsultPlayersController;
+import domains.Player;
+import domains.WorldCup;
+import utils.WorldCupUtils;
 
 /**
  * @author ruitex23
@@ -174,7 +174,7 @@ public class CreateWorldCupController implements ControllersInterface {
 	private void goToAddGamesScreen(ActionEvent event){
 		WorldCup worldCup = createWorldCup();
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/resources/views/AddWorldCupGamesScreen.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/AddWorldCupGamesScreen.fxml"));
 			Parent root = (Parent) loader.load();
 			AddWorldCupGamesController controller = loader.getController();
 			controller.setWorldCup(worldCup);
