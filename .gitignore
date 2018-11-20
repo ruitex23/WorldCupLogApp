@@ -518,3 +518,5 @@ target/classes/main/resources/flags-mini/sb.png
 target/classes/main/resources/flags-normal/dz.png
 /.metadata/
 .idea
+target
+.idea
