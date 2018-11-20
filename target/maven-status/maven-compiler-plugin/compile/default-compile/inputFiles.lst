@@ -10,6 +10,7 @@
 /Users/ruitex23/Documents/Trabalho/SpringWorkspace/WorldCupLogApp/src/main/java/config/WorldCupLogDatabaseTestConfiguration.java
 /Users/ruitex23/Documents/Trabalho/SpringWorkspace/WorldCupLogApp/src/main/java/domains/Composed.java
 /Users/ruitex23/Documents/Trabalho/SpringWorkspace/WorldCupLogApp/src/main/java/controllers/worldCup/AddGameSetsController.java
+/Users/ruitex23/Documents/Trabalho/SpringWorkspace/WorldCupLogApp/src/main/java/utils/WorldCupCommons.java
 /Users/ruitex23/Documents/Trabalho/SpringWorkspace/WorldCupLogApp/src/main/java/domains/WorldCup.java
 /Users/ruitex23/Documents/Trabalho/SpringWorkspace/WorldCupLogApp/src/main/java/controllers/ControllersInterface.java
 /Users/ruitex23/Documents/Trabalho/SpringWorkspace/WorldCupLogApp/src/main/java/controllers/worldCup/CreateWorldCupController.java

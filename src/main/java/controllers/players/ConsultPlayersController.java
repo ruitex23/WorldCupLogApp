@@ -111,12 +111,16 @@ public class ConsultPlayersController implements ControllersInterface {
 				}
 			}
 		} catch (Exception e) {
-			Alert alert = new Alert(javafx.scene.control.Alert.AlertType.ERROR);
-			alert.setTitle("Error");
-			alert.setHeaderText("Please send this to Ghostbusters.");
-			alert.setContentText(e.getStackTrace().toString());
-			alert.showAndWait();
+			handleException(e);
 		}
+	}
+
+	private void handleException(Exception e) {
+		Alert alert = new Alert(Alert.AlertType.ERROR);
+		alert.setTitle("Error");
+		alert.setHeaderText("Please send this to Ghostbusters.");
+		alert.setContentText(e.getStackTrace().toString());
+		alert.showAndWait();
 	}
 
 	private void setupListViewListeners() {
@@ -244,11 +248,7 @@ public class ConsultPlayersController implements ControllersInterface {
 					((Node)event.getSource()).getScene().getWindow() );
 			popupStage.show();
 		} catch (IOException e) {
-			Alert alert = new Alert(javafx.scene.control.Alert.AlertType.ERROR);
-			alert.setTitle("Error");
-			alert.setHeaderText("Please send this to Ghostbusters.");
-			alert.setContentText(e.getStackTrace().toString());
-			alert.showAndWait();
+			handleException(e);
 		}
 	}
 
@@ -271,11 +271,7 @@ public class ConsultPlayersController implements ControllersInterface {
 					((Node)event.getSource()).getScene().getWindow() );
 			popupStage.show();
 		} catch (IOException e) {
-			Alert alert = new Alert(javafx.scene.control.Alert.AlertType.ERROR);
-			alert.setTitle("Error");
-			alert.setHeaderText("Please send this to Ghostbusters.");
-			alert.setContentText(e.getStackTrace().toString());
-			alert.showAndWait();
+			handleException(e);
 		}
 	}
 

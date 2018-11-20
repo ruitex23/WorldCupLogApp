@@ -255,7 +255,7 @@ public class AddWorldCupGamesController  implements ControllersInterface {
 				addGameSetsController = loader.getController();
 				addGameSetsController.setPreviousController(this);
 				addGameSetsController.setAvailablePlayers(registeredPlayers);
-				addGameSetsController.setupScreen(worldCup);
+				addGameSetsController.setupScreen();
 				popupStage.setScene(new Scene(root));
 //				addGameSetsController.setStage(popupStage);
 				popupStage.initModality(Modality.WINDOW_MODAL);
@@ -268,7 +268,7 @@ public class AddWorldCupGamesController  implements ControllersInterface {
 				addGameController = loader.getController();
 				addGameController.setGamesManager(this);
 				addGameController.setAvailablePlayers(registeredPlayers);
-				addGameController.setupScreen(worldCup);
+				addGameController.setupScreen();
 				popupStage.setScene(new Scene(root));
 //				addGameController.setStage(popupStage);
 				popupStage.initModality(Modality.WINDOW_MODAL);

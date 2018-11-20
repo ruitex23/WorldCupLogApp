@@ -25,6 +25,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import utils.WorldCupCommons;
 import utils.WorldCupUtils;
 
 /**
@@ -35,11 +36,12 @@ import utils.WorldCupUtils;
 public class AddGameController {
 	
 	
-	private String phaseDescription;
-	private AddWorldCupGamesController manageGamesController;
+	//Phase
+	private final ToggleGroup phaseGroup = new ToggleGroup();
 //	private Stage stage;
 	List<Player> availablePlayers;
 	Game game;
+	private AddWorldCupGamesController manageGamesController;
 	private Float averageP1;
 	private Float averageP2;
 	private Float gameAverage;
@@ -47,15 +49,10 @@ public class AddGameController {
 	private Boolean confirmedP2;
 	private String player1Name;
 	private String player2Name;
-	
 	@FXML private Button addGameBtn;
-
 	//Game
 	@FXML private Label gameAverageLabel;
 	@FXML private Label winnerLabel;
-
-	//Phase
-	private final ToggleGroup phaseGroup = new ToggleGroup();
 	@FXML private RadioButton last32RadioButton;
 	@FXML private RadioButton last16RadioButton;
 	@FXML private RadioButton quarterFinalsRadioButton;
@@ -93,9 +90,10 @@ public class AddGameController {
 		this.manageGamesController = controller;
 	}
 
-	public void setupScreen(WorldCup worldCup) {
+	public void setupScreen() {
 		addGameBtn.setDisable(true);
 		confirmedP1 = confirmedP2 = false;
+		player2InningsTextField.setDisable(true);
 		game = new Game();
 		WorldCupUtils.sortPlayers(availablePlayers);
 		this.player1ChoiceBox.setItems(FXCollections.observableArrayList(availablePlayers));
@@ -124,87 +122,15 @@ public class AddGameController {
 	 * 
 	 */
 	private void addRadioButtonListeners() {
-		last32RadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
-		    @Override
-		    public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-		        if (isNowSelected) { 
-		            phaseDescription = WorldCupUtils.LAST_32_PHASE;
-		            System.out.println("Entrei!!");
-		        } else {
-		        		phaseDescription = "";
-		        }
-		    }
-		});
-		last16RadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
-		    @Override
-		    public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-		        if (isNowSelected) { 
-		            phaseDescription = WorldCupUtils.LAST_16_PHASE;
-		            System.out.println("Entrei!!");
-		        } else {
-		        		phaseDescription = "";
-		        }
-		    }
-		});
-		quarterFinalsRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
-		    @Override
-		    public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-		        if (isNowSelected) { 
-		            phaseDescription = WorldCupUtils.QUARTER_FINALS_PHASE;
-		            System.out.println("Entrei!!");
-		        } else {
-		        		phaseDescription = "";
-		        }
-		    }
-		});
-		semiFinalsRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
-		    @Override
-		    public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-		        if (isNowSelected) { 
-		            phaseDescription = WorldCupUtils.SEMI_FINALS_PHASE;
-		            System.out.println("Entrei!!");
-		        } else {
-		        		phaseDescription = "";
-		        }
-		    }
-		});
-		thirdForthRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
-		    @Override
-		    public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-		        if (isNowSelected) { 
-		            phaseDescription = WorldCupUtils.THIRD_FORTH_PHASE;
-		            System.out.println("Entrei!!");
-		        } else {
-		        		phaseDescription = "";
-		        }
-		    }
-		});
-		theFinalRadioButton.selectedProperty().addListener(new ChangeListener<Boolean>() {
-		    @Override
-		    public void changed(ObservableValue<? extends Boolean> obs, Boolean wasPreviouslySelected, Boolean isNowSelected) {
-		        if (isNowSelected) { 
-		            phaseDescription = WorldCupUtils.FINAL_PHASE;
-		            System.out.println("Entrei!!");
-		        } else {
-		        		phaseDescription = "";
-		        }
-		    }
-		});
+		WorldCupCommons.setupRadioButtonListeners(last32RadioButton, last16RadioButton, quarterFinalsRadioButton, semiFinalsRadioButton, theFinalRadioButton, thirdForthRadioButton);
 	}
 
 	/**
 	 * 
 	 */
 	private void setTextFieldsOnlyNumeric() {
-
-		player1PointsTextField.textProperty().addListener(new ChangeListener<String>() {
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				if (!newValue.matches("\\d*")) {
-					player1PointsTextField.setText(newValue.replaceAll("[^\\d]", ""));
-				}
-			}
-		});
+		//its the only one that it's different because not only this textField should not allow non
+		//numeric characters but also should update Player 2 innings cuz they'll b the same
 		player1InningsTextField.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
@@ -214,54 +140,14 @@ public class AddGameController {
 				player2InningsTextField.setText(newValue);
 			}
 		});
-		player1ShootoutTextField.textProperty().addListener(new ChangeListener<String>() {
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				if (!newValue.matches("\\d*")) {
-					player1ShootoutTextField.setText(newValue.replaceAll("[^\\d]", ""));
-				}
-			}
-		});
-		player1HighRunTextField.textProperty().addListener(new ChangeListener<String>() {
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				if (!newValue.matches("\\d*")) {
-					player1HighRunTextField.setText(newValue.replaceAll("[^\\d]", ""));
-				}
-			}
-		});
-		player2PointsTextField.textProperty().addListener(new ChangeListener<String>() {
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				if (!newValue.matches("\\d*")) {
-					player2PointsTextField.setText(newValue.replaceAll("[^\\d]", ""));
-				}
-			}
-		});
-		player2InningsTextField.textProperty().addListener(new ChangeListener<String>() {
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				if (!newValue.matches("\\d*")) {
-					player2InningsTextField.setText(newValue.replaceAll("[^\\d]", ""));
-				}
-			}
-		});
-		player2ShootoutTextField.textProperty().addListener(new ChangeListener<String>() {
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				if (!newValue.matches("\\d*")) {
-					player2ShootoutTextField.setText(newValue.replaceAll("[^\\d]", ""));
-				}
-			}
-		});
-		player2HighRunTextField.textProperty().addListener(new ChangeListener<String>() {
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				if (!newValue.matches("\\d*")) {
-					player2HighRunTextField.setText(newValue.replaceAll("[^\\d]", ""));
-				}
-			}
-		});
+		WorldCupCommons.setTextFieldsOnlyNumeric(player1PointsTextField);
+		WorldCupCommons.setTextFieldsOnlyNumeric(player2PointsTextField);
+		WorldCupCommons.setTextFieldsOnlyNumeric(player2InningsTextField);
+		WorldCupCommons.setTextFieldsOnlyNumeric(player1ShootoutTextField);
+		WorldCupCommons.setTextFieldsOnlyNumeric(player2ShootoutTextField);
+		WorldCupCommons.setTextFieldsOnlyNumeric(player1HighRunTextField);
+		WorldCupCommons.setTextFieldsOnlyNumeric(player2HighRunTextField);
+
 	}
 
 	@FXML
@@ -274,7 +160,7 @@ public class AddGameController {
 	 * @return
 	 */
 	private GameExt toGameExt() {
-		GameExt gameExt = new GameExt(phaseDescription, game.toString(), game.getWinner());
+		GameExt gameExt = new GameExt(WorldCupCommons.getPhaseDescription(), game.toString(), game.getWinner());
 		gameExt.setFinalResult(game.getFinalResult());
 		gameExt.setGameAverage(game.getGameAverage());
 		gameExt.setIsSet(game.getIsSet());
@@ -325,7 +211,7 @@ public class AddGameController {
 		gameExt.setPlayerTwoSetTwo(game.getPlayerTwoSetTwo());
 		gameExt.setPlayerTwoSetTwoInnings(game.getPlayerTwoSetTwoInnings());
 		
-		gameExt.setPhaseDescription(phaseDescription);
+		gameExt.setPhaseDescription(WorldCupCommons.getPhaseDescription());
 		return gameExt;
 	}
 	
@@ -420,7 +306,8 @@ public class AddGameController {
 //		addGameBtn.setDisable(true);
 		confirmedP2 = false;
 	}
-	
+
+
 	
 	private void enablePlayer1() {
 		player1ChoiceBox.setDisable(false);
@@ -441,9 +328,9 @@ public class AddGameController {
 	
 	private void enablePlayer2() {
 		player2ChoiceBox.setDisable(false);
-		player2HighRunTextField.setDisable(false);
 		player2InningsTextField.setDisable(false);
 		player2PointsTextField.setDisable(false);
+		player2HighRunTextField.setDisable(false);
 		player2ShootoutTextField.setDisable(false);
 	}
 	
@@ -455,17 +342,4 @@ public class AddGameController {
 		player2ShootoutTextField.setDisable(true);
 	}
 
-	@FXML private void updatePlayer2Innings(ActionEvent event) {
-		if(StringUtils.isBlank(player2InningsTextField.getText()) || 
-				player2InningsTextField.getText().compareToIgnoreCase(player1InningsTextField.getText()) != 0) {
-			player2InningsTextField.setText(player1InningsTextField.getText());
-		}
-	}
-	
-	@FXML private void updatePlayer1Innings(ActionEvent event) {
-		if(StringUtils.isBlank(player1InningsTextField.getText()) || 
-				player1InningsTextField.getText().compareToIgnoreCase(player2InningsTextField.getText()) != 0) {
-			player1InningsTextField.setText(player2InningsTextField.getText());
-		}
-	}
 }
